@@ -30,6 +30,8 @@ body {
     background-color: white;
     color: #2e2f42;
     border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
+
 }
 
 .logo {
@@ -57,10 +59,14 @@ ul {
 
 .header-container {
     display: flex;
-    align-items: center;
-    /* justify-content: space-between; */
+    align-items: center;  
 }
 
+.page-nav {
+    display: flex;
+    gap: 40px;
+    text-decoration: none;   
+}
 
 .page-nav-link {
     color: #2e2f42;
@@ -73,13 +79,24 @@ ul {
     padding-top: 24px;
     padding-bottom: 24px;
     text-decoration: none;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
+.page-nav-link.current {
+    position: relative;
 }
-.page-nav {
-    display: flex;
-    gap: 40px;
-    text-decoration: none;   
+
+.page-nav-link.current::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    border-radius: 2px;
+    width: 100%;
+    height: 4px;
+    background-color: #404bbf;
 }
+
 
 .contacts {
     display: flex;
@@ -100,17 +117,16 @@ ul {
     padding-top: 24px;
     padding-bottom: 24px;
     text-decoration: none;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .page-nav-link:hover,
-.page-nav-link:focus {
-    color: #404bbf;
-}
-
+.page-nav-link:focus, 
 .contacts-item:hover,
-.contacts-item:focus {
+.contacts-item:focus, 
+.page-nav-link.current {
     color: #404bbf;
-    text-decoration: underline;
+    /* text-decoration: underline; */
 }
 
 .page-main {
@@ -120,6 +136,12 @@ ul {
     background-color: #2e2f42;
     padding: 188px 0;
     text-align: center;
+    background-image: linear-gradient(to bottom, rgba(46, 47, 66, 0.7),
+    rgba(46, 47, 66, 0.7)),
+    url(../images/people-office.png);
+    background-position: center;
+    background-size: cover;
+    margin: auto;
 }
 
 .title {
@@ -165,7 +187,6 @@ ul {
     line-height: 1.2;
     margin-bottom: 8px;
 }
-
 
  .visually-hidden {
     position: absolute;
