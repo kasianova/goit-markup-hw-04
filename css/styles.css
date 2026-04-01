@@ -126,7 +126,7 @@ ul {
 .contacts-item:focus, 
 .page-nav-link.current {
     color: #404bbf;
-    /* text-decoration: underline; */
+
 }
 
 .page-main {
@@ -140,8 +140,8 @@ ul {
     rgba(46, 47, 66, 0.7)),
     url(../images/people-office.png);
     background-position: center;
-    background-size: cover;
-    margin: auto;
+    background-size: 1440px auto;
+    background-repeat: no-repeat;
 }
 
 .title {
@@ -199,6 +199,17 @@ ul {
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
+ }
+
+ .feature-icons {
+    border: 1px solid #8e8f99;
+    border-radius: 4px;
+    height: 112px;
+    background-color: #f4f4fd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
  }
 
  .list-features {
