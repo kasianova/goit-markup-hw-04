@@ -171,6 +171,7 @@ ul {
     display: inline-block;
     margin: 0 auto;
     border: none;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
    }
 
 .button:hover,
@@ -256,6 +257,7 @@ ul {
     box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
                 0 1px 1px 0 rgba(46, 47, 66, 0.16),
                 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+                
 }
 
 
@@ -292,6 +294,38 @@ ul {
     font-family: 'Roboto',sans-serif;
     letter-spacing: 0.02em;
     text-align: center;
+    margin-bottom: 8px;
+}
+
+.icons-list-item {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    border: 1px solid #4d5ae5;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icons-list-item:hover,
+.icons-list-item:active {
+    background-color: #404bbf;
+}
+
+.item-soc-icons {
+    fill: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icons-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+     gap: 24px
 }
 .section-portfolio {
     padding-top: 120px;
@@ -315,6 +349,26 @@ ul {
     gap: 48px 24px;
     justify-content: center;
     }
+.overlay {
+    position: relative;
+    overflow: hidden;
+}
+.overlay-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #f4f4fd;
+    background-color: #4d5ae5;
+    width: 100%;
+    height: 100%;
+    padding: 40px 32px 0px 32px;
+    transform: translateY( 100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 .info-card {
     border-bottom: 1px solid #e7e9fc;
@@ -325,6 +379,17 @@ ul {
 
 .portfolio-item {
 width: calc((100% - 24px * 2) / 3);
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.portfolio-item:hover .overlay-text {
+    transform: translateY(0);
+}
+.portfolio-item:hover {
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+                 0 1px 1px 0 rgba(46, 47, 66, 0.16),
+                 0 1px 6px 0 rgba(46, 47, 66, 0.08);
 }
 
 .title-card {
@@ -372,6 +437,47 @@ width: calc((100% - 24px * 2) / 3);
 
 .foot-container {
     display: flex;
-    flex-direction: column;
     align-items: flex-start;
+    gap: 120px;
+}
+
+
+.soc-footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 208px;
+}
+
+.soc-text-footer {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: white;
+    margin-bottom: 16px;
+}
+
+.icons-list-footer {
+    display: flex;
+    gap: 16px;
+}
+
+.icons-list-item-footer {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    border: 1px solid #4d5ae5;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icons-list-item-footer:hover,
+.icons-list-item-footer:active {
+    background-color: #31d0aa;
 }
